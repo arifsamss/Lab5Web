@@ -281,8 +281,51 @@ File: daftar_menu.html
 </body>
 </html>
 ~~~
-![Uploading 11. DOM.JPG…]()
+![11  DOM](https://user-images.githubusercontent.com/81839328/116779806-b3a08f00-aaa2-11eb-957e-96d1729fe011.JPG)
 
 # Pertanyaan dan Tugas
 1. Buat script untuk melakukan validasi pada isian form.
 ~~~
+<html>
+<head>
+	<title>Selamat Datang</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<center><h2>Reservation</h2></center>
+	<div class="login">
+		<form action="#" method="POST" onSubmit="validasi()">
+			<div>
+				<label>Nama Pelanggan:</label>
+				<input type="text" name="nama" id="nama" />
+			</div>
+			<div>
+				<label>Email:</label>
+				<input type="email" name="email" id="email" />
+			</div>
+			<div>
+				<label>Alamat:</label>
+				<textarea cols="40" rows="5" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	function validasi() {
+		var nama = document.getElementById("nama").value;
+		var email = document.getElementById("email").value;
+		var alamat = document.getElementById("alamat").value;
+		if (nama != "" && email!="" && alamat !="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+</html>
+~~~
+![12  Soal 1](https://user-images.githubusercontent.com/81839328/116779826-d2068a80-aaa2-11eb-87ba-13b9a3c741fd.JPG)
+
